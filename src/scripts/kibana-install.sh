@@ -20,8 +20,8 @@ help()
     echo "Options:"
     echo "    -n      elasticsearch cluster name"
     echo "    -v      kibana version e.g 6.4.1"
-    echo "    -u      elasticsearch url e.g. http://10.0.0.4:9200"
-    echo "    -l      install X-Pack plugin (<6.3.0) or apply trial license for Platinum features (6.3.0+)"
+    echo "    -u      elasticsearch url e.g. http://10.126.181.4:9200"
+    echo "    -l      install X-Pack plugin (<6.3.0) or apply trial license for Platinum featu/s (6.3.0+)"
     echo "    -S      kibana password"
     echo "    -C      kibana cert to encrypt communication between the browser and Kibana"
     echo "    -K      kibana key to encrypt communication between the browser and Kibana"
@@ -65,7 +65,7 @@ fi
 CLUSTER_NAME="elasticsearch"
 KIBANA_VERSION="6.4.1"
 #Default internal load balancer ip
-ELASTICSEARCH_URL="http://10.0.0.4:9200"
+ELASTICSEARCH_URL="http://10.126.181.4:9200"
 INSTALL_XPACK=0
 BASIC_SECURITY=0
 USER_KIBANA_PWD="changeme"
