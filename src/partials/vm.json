@@ -126,8 +126,8 @@
       },
       "properties": {
         "publicIPAllocationMethod": "Static",
-        "dnsSettings": {
-          "domainNameLabel": "[concat(variables('namespace'), parameters('index'), uniqueString(resourceGroup().id, deployment().name))]"
+        "dnsSettings": { 
+          "domainNameLabel": "[toLower(concat(variables('namespace'), parameters('index'), uniqueString(resourceGroup().id, deployment().name)))]"
         }
       }
     },
