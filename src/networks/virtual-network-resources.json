@@ -36,7 +36,10 @@
         {
           "name": "[parameters('networkSettings').subnet.name]",
           "properties": {
-            "addressPrefix": "[parameters('networkSettings').subnet.addressPrefix]"
+            "addressPrefix": "[parameters('networkSettings').subnet.addressPrefix]",
+            "natGateway": {
+            "id":  "/subscriptions/d9c70d5d-e889-425e-935c-8c4d980b9107/resourceGroups/ATT_ELK/providers/Microsoft.Network/natGateways/ES_NatGW" 
+          }
           }
         },
         {
@@ -50,7 +53,10 @@
         {
           "name": "[parameters('networkSettings').subnet.name]",
           "properties": {
-            "addressPrefix": "[parameters('networkSettings').subnet.addressPrefix]"
+            "addressPrefix": "[parameters('networkSettings').subnet.addressPrefix]",
+            "natGateway": {
+            "id": "/subscriptions/d9c70d5d-e889-425e-935c-8c4d980b9107/resourceGroups/ATT_ELK/providers/Microsoft.Network/natGateways/ES_NatGW"
+            }
           }
         }
       ]
@@ -59,7 +65,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2019-04-01",
+      "apiVersion": "2019-11-01",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[parameters('networkSettings').name]",
       "location": "[parameters('networkSettings').location]",
